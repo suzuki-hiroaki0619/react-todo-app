@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Container,List} from "@chakra-ui/react";
+import React, { useRef } from "react";
+import { Container } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons"
 import { useTodo } from "../hooks/useTodo";
 import { TodoTitle } from "./TodoTitle";
