@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const todoDataUrl = "react-todo-app-j616.onrender.com/todos";
+const todoDataUrl = "https://react-todo-app-j616.onrender.com/todos";
 
 export const getAllTodosData = async () =>{
  const response = await axios.get(todoDataUrl);
