@@ -3,10 +3,9 @@ import { createRoot } from "react-dom/client";
 import App from "./components/App";
 //import { Text } from "@chakra-ui/react";
 //import ReactDOM from "react-dom";
-import { StrictMode } from "react";
+//import { StrictMode } from "react";
 import { 
-    ChakraProvider,
-    defaultSystem, 
+    ChakraProvider, 
 } from "@chakra-ui/react";
 import theme from "./theme/theme";
 
