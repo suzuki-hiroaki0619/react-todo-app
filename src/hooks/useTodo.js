@@ -22,11 +22,12 @@ export const useTodo = () => {
         });
     };
 
-    const addTodoListItem = (todoContent, todoDate, category, comment) => {
+    const addTodoListItem = (todoContent, todoDate, category, status, comment) => {
         const newTodoItem = {
             content: todoContent,
             date: todoDate,
             category: category,
+            status: category === "仕事" ? status : "",
             id: ulid(),
             done: false,
             comment: comment || "",
