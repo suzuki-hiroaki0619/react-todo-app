@@ -11,6 +11,7 @@ import theme from "./theme/theme";
 
 //const rootElement = document.getElementById("root");
 const root = createRoot(document.getElementById("root"));
+const commentInput = document.getElementById("comment");
 
 root.render(
   <React.StrictMode>
