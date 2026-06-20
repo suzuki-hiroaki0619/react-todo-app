@@ -29,7 +29,7 @@ export const useTodo = () => {
             category: category,
             id: ulid(),
             done: false,
-            comment: ""
+            comment: comment || "",
         };
 
         return todoData.addTodoData(newTodoItem).then((addTodo) => {
