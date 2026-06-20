@@ -16,6 +16,7 @@ export const TodoItem = ({
     const [ editDate, setEditDate] = useState(todo.date || "");
     const [ editCategory, setEditCategory] = useState(todo.category || ""); 
     const [ editStatus, setEditStatus] = useState(todo.status || "未着手");
+    const [editComment, setEditComment] = useState(todo.comment || "");
 
     const handleToggleTodoListItemStatus= () => 
       toggleTodoListItemStatus( todo.id, todo.done);
@@ -39,7 +40,7 @@ export const TodoItem = ({
     const handleSave = () => {
         if (editContent === "") return;
 
-        updateTodoListItem( todo.id, editContent, editDate, editCategory, editStatus);
+        updateTodoListItem( todo.id, editContent, editDate, editCategory, editStatus, editComment);
         setIsEditing(false);
     };
 
@@ -77,9 +78,15 @@ export const TodoItem = ({
           onChange={(e) => setEditDate(e.target.value)}
           mb="3"
         />  
+        <Textarea
+          value={editComment}
+          onChange={(e) => setEditComment(e.target.value)}
+          placeholder="コメントを入力"
+          mb="3"
+        />     
         <Select 
           value={editCategory}
-          onClick={ (e) => setEditCategory(e.target.value)}
+          onChange={ (e) => setEditCategory(e.target.value)}
           md="3"
           >
           <Select 
@@ -114,6 +121,11 @@ export const TodoItem = ({
         <Text fontSize="sm" color="purple.500">
             ステート : {todo.status || "未設定"}
         </Text>
+       {todo.comment && (
+       <Text fontSize="sm" color="gray.600" mt="2">
+        コメント : {todo.comment}
+        </Text>
+)}
         </>
       )}
        <div>
