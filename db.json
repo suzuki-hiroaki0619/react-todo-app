@@ -9,39 +9,32 @@
     },
     {
       "content": "△△現場　見積書作成",
-      "date": "2026-05-12",
+      "date": "2026-06-30",
       "id": "jpclLGQMgCM",
       "done": false
     },
     {
-      "content": "っっh",
-      "date": "2026-05-27",
+      "content": "",
+      "date": "2026-06-27",
       "id": "WIxS2_Ghwfs",
       "done": false,
       "category": "仕事"
     },
     {
-      "content": "www",
-      "date": "2026-05-20",
+      "content": "〇〇現場　打ち合わせ",
+      "date": "2026-06-20",
       "category": "仕事",
       "id": "f2OuL1CEysw",
       "done": false
     },
     {
-      "content": "jjj",
-      "date": "2026-06-02",
+      "content": "△△現場打ち合わせ",
+      "date": "2026-07-02",
       "category": "仕事",
       "id": "njl7fEQ7FbM",
       "done": false
     },
-    {
-      "content": "aaa",
-      "date": "2026-06-02",
-      "category": "仕事",
-      "id": "7yWcw8UnLeA",
-      "done": false,
-      "status": "作業中"
-    }
+    
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
