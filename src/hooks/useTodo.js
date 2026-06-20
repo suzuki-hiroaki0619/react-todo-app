@@ -22,7 +22,7 @@ export const useTodo = () => {
         });
     };
 
-    const addTodoListItem = (todoContent, todoDate, category) => {
+    const addTodoListItem = (todoContent, todoDate, category, comment) => {
         const newTodoItem = {
             content: todoContent,
             date: todoDate,
