@@ -28,7 +28,8 @@ export const useTodo = () => {
             date: todoDate,
             category: category,
             id: ulid(),
-            done: false
+            done: false,
+            comment: ""
         };
 
         return todoData.addTodoData(newTodoItem).then((addTodo) => {
