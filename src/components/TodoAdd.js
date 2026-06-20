@@ -44,14 +44,17 @@ export const TodoAdd = ({
           <option value="作業中">作業中</option>
           <option value="確認中">確認中</option>
         </Select>
-        <div>
-         <label for="comment" class="form-label">コメント</label>
-         <textarea
-           id="comment"
-           class="form-control"
-           placeholder="コメントを入力"
-         ></textarea>
-               </ div>
+        <Box mt="3">
+        <Text mb="1">コメント</Text>
+        <Textarea
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          placeholder="コメントを入力"
+          bgColor="white"
+          borderColor="gray.400"
+          />
+         </Box>
+
       )}
     <Button 
       onClick={() => handleAddTodoListItem(status)}
