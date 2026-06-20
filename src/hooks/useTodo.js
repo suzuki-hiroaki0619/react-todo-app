@@ -47,7 +47,7 @@ export const useTodo = () => {
         });
     };
 
-    const updateTodoListItem = ( id, content, date, category, status) => {
+    const updateTodoListItem = ( id, content, date, category, status, comment) => {
         const todoItem = todoList.find((item) => item.id === id );
 
         const newTodoItem = {
