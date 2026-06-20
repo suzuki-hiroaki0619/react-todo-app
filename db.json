@@ -33,7 +33,7 @@
       "category": "仕事",
       "id": "njl7fEQ7FbM",
       "done": false
-    },
+    }
     
   ],
   "$schema": "./node_modules/json-server/schema.json"
