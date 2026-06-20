@@ -55,6 +55,7 @@ export const useTodo = () => {
             date,
             category,
             status: category === "仕事" ? status : "",
+            comment,
         };
 
         todoData.updateTodoData( id, newTodoItem).then((updatedTodo) => {
