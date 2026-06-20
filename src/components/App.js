@@ -76,7 +76,7 @@ function App (){
   const categoryInputEl = useRef(null);
 
 
-  const handleAddTodoListItem = (status) => {
+  const handleAddTodoListItem = (status, comment) => {
     if (inputEl.current.value === "") return;
     if (dateInputEl.current.value === "") return;
     if (categoryInputEl.current.value === "") return;
@@ -85,7 +85,8 @@ function App (){
       inputEl.current.value,
       dateInputEl.current.value,
       categoryInputEl.current.value,
-      status
+      status,
+      comment
     );
     inputEl.current.value = "";
     dateInputEl.current.value = "";
