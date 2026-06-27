@@ -114,7 +114,7 @@ function App (){
   // console.log("未完了TODOリスト:",completedList);
 
   return (
-    <Container centerContent p={{ base: "4", md: "6" }} maxWidth="3xl">
+    <Container centerContent p={{ base: "4", md: "6" }} maxWidth="7xl">
     <TodoTitle 
       title="TODO進捗管理" 
       as="h1"
@@ -133,7 +133,7 @@ function App (){
       w="100"
       gap="6"
       align="flex-start"
-      direction="{{ base: "column", lg: "row"}}
+      direction={{ base: "column", lg: "row"}}
     >
     <TodoList
       todoList={inCompletedList}
