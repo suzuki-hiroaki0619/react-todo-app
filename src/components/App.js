@@ -130,8 +130,8 @@ function App (){
       handleAddTodoListItem={handleAddTodoListItem} 
     />
     <Flex
-      w="100"
-      gap="6"
+      w="100%"
+      gap="16"
       align="flex-start"
       direction={{ base: "column", lg: "row"}}
     >
@@ -143,6 +143,7 @@ function App (){
       categoryInputEl={categoryInputEl}
       title="未完了TODOリスト" 
       as="h2" 
+      mr={{ lg: "6" }}
       fontSize={{ base: "xl", md: "2xl"}}
     />
     <TodoList 
@@ -153,6 +154,7 @@ function App (){
       categoryInputEl={categoryInputEl}
       title="完了TODOリスト" 
       as="h2"
+       ml={{ lg: "6" }}
       fontSize={{ base: "xl", md: "2xl"}}
     />
       </Flex>
