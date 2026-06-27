@@ -93,6 +93,15 @@ export const TodoItem = ({
         {todo.category === "仕事" && (
           <p>ステート: {todo.status || "未着手"}</p>
         )}
+   　　　{todo.comment && (
+       <Text fontSize="sm" 
+             color="gray.600"
+             mt="2"
+             whiteSpace="pre-wrap"
+         >
+        コメント : 
+        {`コメント：\n${todo.comment}`}
+        </Text>
 
         {editCategory === "仕事" && (
   <Select value={editStatus} onChange={(e) => setEditStatus(e.target.value)}>
@@ -122,14 +131,12 @@ export const TodoItem = ({
             ステート : {todo.status || "未設定"}
         </Text>
        {todo.comment && (
-       <Text fontSize="sm" 
-             color="gray.600"
-             mt="2"
-             whiteSpace="pre-wrap"
-         >
-        コメント : 
-        {`コメント：\n${todo.comment}`}
-        </Text>
+      <Textarea
+  value={editComment}
+  onChange={(e) => setEditComment(e.target.value)}
+  placeholder="コメントを入力"
+  mb="3"
+/>
 )}
         </>
       )}
