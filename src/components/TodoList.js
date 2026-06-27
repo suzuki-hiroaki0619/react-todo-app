@@ -12,7 +12,7 @@ import { List, Box } from "@chakra-ui/react"
     updateTodoListItem,
  }) => {
   return (
-     <Box flex="1">
+     <Box flex="1" w="100%">
      {todoList.length !== 0 && (
         <>
         <TodoTitle title={title} as={as} fontSize={fontSize} mt="12" />
