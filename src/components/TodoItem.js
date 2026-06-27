@@ -111,10 +111,15 @@ export const TodoItem = ({
         </>
       ) : (
         <>
+         <div>
         <Text mb="2">{todo.content}</Text>
         <text fontSize="sm" color="gray.500">
             期限：{todo.date || "未設定"}
         </text>
+                  {isOver(todo.date) && (
+                    <Text color="red.500" fontWeight="bold" mt="1">期限超過</Text>
+                  )}
+       </div>
         <Text fontSize="sm" color="purple.500">
             カテゴリー : {todo.category || "未設定"}
         </Text>
@@ -130,7 +135,7 @@ export const TodoItem = ({
       )}
        <div>
                   {isOver(todo.date) && (
-                    <Text color="red.500" fontWeight="bold" mt="1">期限切れ</Text>
+                    <Text color="red.500" fontWeight="bold" mt="1">期限超過</Text>
                   )}
        </div>
        <Button
