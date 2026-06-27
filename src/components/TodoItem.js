@@ -56,14 +56,6 @@ export const TodoItem = ({
       borderRadius="md"
       borderColor={isOver(todo.date) ? "red.400" : "gray.300"}
       w="100%"
-      animation={isOver(todo.date) ? "blink 1s infinite" : "none"}
-      sx={{
-        "@keyframes blink" : {
-            "0%": { backgroundColor: "white"},
-            "50%": { backgroundColor: "#fed7d7"},
-            "100%": { backgroundColor: "white"},
-        },
-      }}
     >
       { isEditing ? (
         <>
@@ -117,7 +109,7 @@ export const TodoItem = ({
             期限：{todo.date || "未設定"}
         </text>
                   {isOver(todo.date) && (
-                    <Text color="red.500" fontWeight="bold" mt="1">期限超過</Text>
+                    <Text color="red.600" fontWeight="bold" mt="1">期限超過</Text>
                   )}
        </div>
         <Text fontSize="sm" color="purple.500">
