@@ -108,9 +108,9 @@ export const TodoItem = ({
         <Text mb="2" fontWeight="bold">
          {index + 1}. {todo.content}
          </Text>
-        <text fontSize="sm" color="gray.500">
+        <Text fontSize="sm" color="gray.500">
             期限：{todo.date || "未設定"}
-        </text>
+        </Text>
                   {isOver(todo.date) && (
                     <Text color="red.600" fontWeight="bold" mt="1">期限超過</Text>
                   )}
@@ -133,14 +133,6 @@ export const TodoItem = ({
 )}
         </>
       )}
-       <Button
-             colorScheme="red"
-             size="sm"
-             onClick={() => notifySlack(todo)}
-           >
-             Slack通知
-           </Button>
-
       <Flex align="center" justify="flex-end" gap="2" mt="4">
         { isEditing ? (
             <IconButton
