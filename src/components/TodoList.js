@@ -20,6 +20,7 @@ import { List, Box } from "@chakra-ui/react"
             {todoList.map((todo) => (
         <TodoItem 
         todo={todo} 
+  　　　 index={index}
         key={todo.id}
         toggleTodoListItemStatus={toggleTodoListItemStatus}
         deleteTodoListItem={deleteTodoListItem}
