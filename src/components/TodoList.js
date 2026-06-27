@@ -1,6 +1,6 @@
 import { TodoTitle } from "./TodoTitle";
 import { TodoItem } from "./TodoItem";
-import { List } from "@chakra-ui/react"
+import { List, Box } from "@chakra-ui/react"
 
  export const TodoList = ({ 
     title,
@@ -12,7 +12,7 @@ import { List } from "@chakra-ui/react"
     updateTodoListItem,
  }) => {
   return (
-     <>
+     <Box flex="1">
      {todoList.length !== 0 && (
         <>
         <TodoTitle title={title} as={as} fontSize={fontSize} mt="12" />
@@ -29,6 +29,6 @@ import { List } from "@chakra-ui/react"
         </List>
         </>
      )}
-     </>
+     </Box>
   );
 };
