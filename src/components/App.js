@@ -1,5 +1,5 @@
 import React, {  useRef } from "react";
-import { Container} from "@chakra-ui/react";
+import { Container, Flex} from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons"
 import { useTodo } from "../hooks/useTodo";
 import { TodoTitle } from "./TodoTitle";
@@ -129,6 +129,12 @@ function App (){
       categoryInputEl={categoryInputEl}      
       handleAddTodoListItem={handleAddTodoListItem} 
     />
+    <Flex
+      w="100"
+      gap="6"
+      align="flex-start"
+      direction="{{ base: "column", lg: "row"}}
+    >
     <TodoList
       todoList={inCompletedList}
       toggleTodoListItemStatus={toggleTodoListItemStatus}
@@ -149,6 +155,7 @@ function App (){
       as="h2"
       fontSize={{ base: "xl", md: "2xl"}}
     />
+      </Flex>
     </Container>
   );
 }
