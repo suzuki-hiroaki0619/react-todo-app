@@ -125,11 +125,10 @@ export const TodoItem = ({
        <Text fontSize="sm" 
              color="gray.600"
              mt="2"
-             whiteSpace="pre-Wrap"
+             whiteSpace="pre-wrap"
          >
         コメント : 
-        {"\n"}
-        {todo.comment}
+        {`コメント：\n${todo.comment}`}
         </Text>
 )}
         </>
