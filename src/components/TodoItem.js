@@ -81,25 +81,19 @@ export const TodoItem = ({
           value={editCategory}
           onChange={ (e) => setEditCategory(e.target.value)}
           md="3"
-          >
+          > </Select>
           <Select 
           value={editStatus}
           onClick={ (e) => setEditStatus(e.target.value)}
           md="3"
-          ></Select>  
-            <option value="仕事">仕事</option>
-            <option value="プライベート">プライベート</option>
-          </Select>
+          >
+          <option value="仕事">仕事</option>
+          <option value="プライベート">プライベート</option>
+          </Select>  
         {todo.category === "仕事" && (
           <p>ステート: {todo.status || "未着手"}</p>
         )}
-   　　　{todo.comment && (
-       <Textarea
-  value={editComment}
-  onChange={(e) => setEditComment(e.target.value)}
-  placeholder="コメントを入力"
-  mb="3"
-/>
+        />
 
         {editCategory === "仕事" && (
   <Select value={editStatus} onChange={(e) => setEditStatus(e.target.value)}>
