@@ -24,18 +24,18 @@ export const TodoItem = ({
 
     const handleDeleteTodoListItem = () => deleteTodoListItem(todo.id);
 
-    const notifySlack = async (todo) =>{
-        await fetch("http://localhost:4000/slack-notify",{
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                content: todo.content,
-                date: todo.date
-            }),
-        });
-    };
+    // const notifySlack = async (todo) =>{
+    //     await fetch("http://localhost:4000/slack-notify",{
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({
+    //             content: todo.content,
+    //             date: todo.date
+    //         }),
+    //     });
+    // };
     
 
     const handleSave = () => {
