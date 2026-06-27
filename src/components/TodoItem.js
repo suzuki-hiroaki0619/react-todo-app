@@ -7,6 +7,7 @@ import { isOver } from "../hooks/useTodo";
 
 export const TodoItem = ({ 
     todo,
+    index,
     toggleTodoListItemStatus,
     deleteTodoListItem,
     updateTodoListItem,
@@ -104,7 +105,9 @@ export const TodoItem = ({
       ) : (
         <>
          <div>
-        <Text mb="2">{todo.content}</Text>
+        <Text mb="2" fontWeight="bold">
+         {index + 1}. {todo.content}
+         </Text>
         <text fontSize="sm" color="gray.500">
             期限：{todo.date || "未設定"}
         </text>
@@ -119,8 +122,14 @@ export const TodoItem = ({
             ステート : {todo.status || "未設定"}
         </Text>
        {todo.comment && (
-       <Text fontSize="sm" color="gray.600" mt="2">
-        コメント : {todo.comment}
+       <Text fontSize="sm" 
+             color="gray.600"
+             mt="2"
+             whiteSpace="pre-Wrap"
+         >
+        コメント : 
+        {"\n"}
+        {todo.comment}
         </Text>
 )}
         </>
