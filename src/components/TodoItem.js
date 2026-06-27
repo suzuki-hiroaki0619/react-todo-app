@@ -133,11 +133,6 @@ export const TodoItem = ({
 )}
         </>
       )}
-       <div>
-                  {isOver(todo.date) && (
-                    <Text color="red.500" fontWeight="bold" mt="1">期限超過</Text>
-                  )}
-       </div>
        <Button
              colorScheme="red"
              size="sm"
